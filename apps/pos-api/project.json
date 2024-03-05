@@ -1,0 +1,24 @@
+{
+  "name": "pos-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/pos-api/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "pos-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "pos-api:build:development"
+        },
+        "production": {
+          "buildTarget": "pos-api:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
